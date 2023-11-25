@@ -1,14 +1,21 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyles, theme } from './styles';
-import Store from './pages';
+
+import { Store, PageNotFound } from './pages';
 
 const App = () => {
   return (
-    <ThemeProvider theme={theme}>
-      <GlobalStyles />
-      <Store />
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={theme}>
+        <GlobalStyles />
+        <Routes>
+          <Route path="/" element={<Store />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </ThemeProvider>
+    </Router>
   );
 };
 

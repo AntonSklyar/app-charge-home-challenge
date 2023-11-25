@@ -1,3 +1,4 @@
 import Store from './Store';
+import PageNotFound from './PageNotFound';
 
-export default Store;
+export { Store, PageNotFound };

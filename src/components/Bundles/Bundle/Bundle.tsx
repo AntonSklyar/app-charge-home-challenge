@@ -1,11 +1,6 @@
 import React from 'react';
 import { IBundle } from '../../../constants/bundles.types';
-import {
-  StyledBundle,
-  StyledBundleContainer,
-  StyledBundleInformation,
-  styles,
-} from './Bundle.styled';
+import { StyledBundle, StyledBundleInformation, styles } from './Bundle.styled';
 import { getTimeLeft } from '../../../utils';
 import { BackgroundImage, Button, Products, Text } from '../../index';
 import {
@@ -16,7 +11,7 @@ import {
 import { Buttons } from '../../Button/Button.types';
 import { theme } from '../../../styles';
 import { useHorizontalScroll } from '../../../hooks';
-import Image from '../../Image';
+import BundleSlider from './BundleSlider';
 
 const Bundle = ({
   bgImage,
@@ -39,30 +34,11 @@ const Bundle = ({
   return (
     <StyledBundle>
       {isOverflowing && (
-        <StyledBundleContainer>
-          <Button
-            onClick={() => handleHorizontalScroll(-10)}
-            buttonStyle={Buttons.SliderButton}
-          >
-            <Image
-              imageDescription="left-arrow"
-              imageSrc={svgArrowLeft}
-              width="24px"
-              height="24px"
-            />
-          </Button>
-          <Button
-            onClick={() => handleHorizontalScroll(10)}
-            buttonStyle={Buttons.SliderButton}
-          >
-            <Image
-              imageDescription="right-arrow"
-              imageSrc={svgArrowRight}
-              width="24px"
-              height="24px"
-            />
-          </Button>
-        </StyledBundleContainer>
+        <BundleSlider
+          handleHorizontalScroll={handleHorizontalScroll}
+          svgArrowLeft={svgArrowLeft}
+          svgArrowRight={svgArrowRight}
+        />
       )}
       <BackgroundImage
         backgroundImage={bgImage}

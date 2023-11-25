@@ -20,7 +20,7 @@ export const StyledBundle = styled.div`
   position: relative;
 `;
 
-export const StyledBundleContainer = styled.div`
+export const StyledBundleSlider = styled.div`
   position: absolute;
   display: flex;
   gap: 8px;

@@ -3,9 +3,14 @@ import { useDataFetcher } from '../../hooks';
 import { StyledBundles, StyledBundlesContainer } from './Bundles.styled';
 
 import Bundle from './Bundle';
+import Loader from '../Loader';
 
 const Bundles = () => {
-  const { bundles } = useDataFetcher();
+  const { bundles, loading } = useDataFetcher();
+
+  if (loading) {
+    return <Loader />;
+  }
 
   return (
     <StyledBundles>

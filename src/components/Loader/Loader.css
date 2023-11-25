@@ -1,0 +1,39 @@
+#outer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+#middle {
+    height: 60px;
+    width: 60px;
+    margin: auto;
+    position: relative;
+    top: 20px;
+    border-radius: 50%;
+    background-image: linear-gradient(150deg, transparent 50%, #ad5c14 50%), linear-gradient(90deg, #ad5c14 50%, #633724 50%);
+    -webkit-animation: rotation 1200ms infinite linear;
+    animation: rotation 1200ms infinite linear;
+    transform-origin: 50% 50%;
+}
+
+#inner {
+    background: #E87C19;
+    height: 48px;
+    width: 48px;
+    margin: auto;
+    position: relative;
+    top: 6px;
+    border-radius: 50%;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(270deg);
+    }
+    to {
+        transform: rotate(630deg);
+    }
+}
