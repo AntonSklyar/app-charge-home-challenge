@@ -3,6 +3,7 @@ import {
   StyledProduct,
   StyledProductAmount,
   StyledProductImg,
+  StyledProductImgContainer,
 } from './Product.styled';
 
 import { ProductType } from '../../../constants';
@@ -10,7 +11,9 @@ import { ProductType } from '../../../constants';
 const Product = ({ productImage, amount, productTextColor }: ProductType) => {
   return (
     <StyledProduct>
-      <StyledProductImg src={productImage} alt="product-image" />
+      <StyledProductImgContainer>
+        <StyledProductImg src={productImage} alt="product-image" />
+      </StyledProductImgContainer>
       <StyledProductAmount productTextColor={productTextColor}>
         {amount}
       </StyledProductAmount>

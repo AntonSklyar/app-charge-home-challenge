@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDataFetcher } from '../../hooks';
-import { StyledBundles } from './Bundles.styled';
+import { StyledBundles, StyledBundlesContainer } from './Bundles.styled';
 
 import Bundle from './Bundle';
 
@@ -9,9 +9,11 @@ const Bundles = () => {
 
   return (
     <StyledBundles>
-      {bundles.map((bundle, i) => (
-        <Bundle key={i} {...bundle} />
-      ))}
+      <StyledBundlesContainer>
+        {bundles.map((bundle, i) => (
+          <Bundle key={i} {...bundle} />
+        ))}
+      </StyledBundlesContainer>
     </StyledBundles>
   );
 };
