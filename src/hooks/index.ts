@@ -1,3 +1,4 @@
 import useDataFetcher from './useDataFetcher';
+import useHorizontalScroll from './useHorizontalScroll';
 
-export { useDataFetcher };
+export { useDataFetcher, useHorizontalScroll };

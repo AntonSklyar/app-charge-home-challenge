@@ -27,7 +27,6 @@ const Bundle = ({
         <StyledBundleItem>
           Available: {available}/{maxAvailable}
         </StyledBundleItem>
-
         <StyledBundleItem>{getTimeLeft(timeLeftMs)}</StyledBundleItem>
       </StyledBundleInformation>
       <Button {...price} />
