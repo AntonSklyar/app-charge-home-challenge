@@ -5,11 +5,12 @@ import Image from '../../Image';
 import { StyledBundleSlider } from './Bundle.styled';
 import { IBundleSlider } from './Bundle.types';
 
-const BundleSlider = ({
-  handleHorizontalScroll,
-  svgArrowLeft,
-  svgArrowRight,
-}: IBundleSlider) => {
+const BundleSlider = ({ handleHorizontalScroll }: IBundleSlider) => {
+  const svgArrowLeft: string =
+    './assets/svg/iconmonstr-arrow-left-alt-filled.svg';
+  const svgArrowRight: string =
+    './assets/svg/iconmonstr-arrow-right-alt-filled.svg';
+
   return (
     <StyledBundleSlider>
       <Button

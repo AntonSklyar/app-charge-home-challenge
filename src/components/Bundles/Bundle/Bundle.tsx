@@ -25,20 +25,13 @@ const Bundle = ({
   const { elementRef, handleHorizontalScroll, isOverflowing } =
     useHorizontalScroll(25, 100);
 
-  const svgArrowLeft = './assets/svg/iconmonstr-arrow-left-alt-filled.svg';
-  const svgArrowRight = './assets/svg/iconmonstr-arrow-right-alt-filled.svg';
-
   const PRICE = `${currencySymbol}${amount}`;
   const ITEMS_AVAILABLE = `Available: ${available}/${maxAvailable}`;
 
   return (
     <StyledBundle>
       {isOverflowing && (
-        <BundleSlider
-          handleHorizontalScroll={handleHorizontalScroll}
-          svgArrowLeft={svgArrowLeft}
-          svgArrowRight={svgArrowRight}
-        />
+        <BundleSlider handleHorizontalScroll={handleHorizontalScroll} />
       )}
       <BackgroundImage
         backgroundImage={bgImage}
