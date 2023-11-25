@@ -1,23 +1,23 @@
-export type PriceType = {
+export interface IPrice {
   amount: number;
   currencySymbol: string;
-};
+}
 
-export type ProductType = {
+export interface IProduct {
   productImage: string;
   amount: string;
   productTextColor: string;
-};
+}
 
-export type BundleType = {
+export interface IBundle {
   bgImage: string;
   timeLeftMs: number;
   maxAvailable: number;
   available: number;
-  price: PriceType;
-  products: ProductType[];
-};
+  price: IPrice;
+  products: IProduct[];
+}
 
-export type BundlesType = {
-  bundles: BundleType[];
-};
+export interface IBundles {
+  bundles: IBundle[];
+}

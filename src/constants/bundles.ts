@@ -1,6 +1,6 @@
-import { BundlesType } from './bundles.types';
+import { IBundles } from './bundles.types';
 
-export const BUNDLES: BundlesType = {
+export const BUNDLES: IBundles = {
   bundles: [
     {
       bgImage: './assets/cover.png',
@@ -43,6 +43,31 @@ export const BUNDLES: BundlesType = {
           productImage: './assets/asset1.png',
           amount: '12,000',
           productTextColor: 'blue',
+        },
+        {
+          productImage: './assets/asset2.png',
+          amount: '60M',
+          productTextColor: 'gold',
+        },
+        {
+          productImage: './assets/asset3.png',
+          amount: '40',
+          productTextColor: 'pink',
+        },
+        {
+          productImage: './assets/asset1.png',
+          amount: '12,000',
+          productTextColor: 'blue',
+        },
+        {
+          productImage: './assets/asset2.png',
+          amount: '60M',
+          productTextColor: 'gold',
+        },
+        {
+          productImage: './assets/asset3.png',
+          amount: '40',
+          productTextColor: 'pink',
         },
         {
           productImage: './assets/asset2.png',

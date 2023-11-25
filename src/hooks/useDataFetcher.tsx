@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react';
 import { getRandomDelayPromise } from '../utils';
-import { BundlesType, BundleType } from '../constants';
+import { IBundles, IBundle } from '../constants/bundles.types';
 
-function useDataFetcher(): BundlesType {
-  const [bundles, setBundles] = useState<BundleType[]>([]);
+function useDataFetcher(): IBundles {
+  const [bundles, setBundles] = useState<IBundle[]>([]);
 
   useEffect(() => {
     getRandomDelayPromise()
-      .then((res: BundlesType) => {
+      .then((res: IBundles) => {
         setBundles(res.bundles);
       })
       .catch((error) => {

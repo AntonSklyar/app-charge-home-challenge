@@ -6,7 +6,6 @@ export const StyledBundles = styled.div`
   align-items: center;
   height: 100vh;
   width: 100vw;
-  padding: 24px;
 `;
 
 export const StyledBundlesContainer = styled.div`

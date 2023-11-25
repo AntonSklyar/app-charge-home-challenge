@@ -1,6 +1,7 @@
-import { BUNDLES, BundlesType } from '../constants';
+import { IBundles } from '../constants/bundles.types';
+import BUNDLES from '../constants';
 
-function getRandomDelayPromise(): Promise<BundlesType> {
+function getRandomDelayPromise(): Promise<IBundles> {
   return new Promise((resolve) => {
     const delay: number = Math.floor(Math.random() * 5000) + 1000;
 

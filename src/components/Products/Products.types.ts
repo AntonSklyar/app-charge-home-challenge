@@ -1,9 +1,12 @@
-import { ProductType } from '../../constants';
+import React from 'react';
+import { IProduct } from '../../constants/bundles.types';
 
-export type ProductsType = {
-  products: ProductType[];
-};
-
-export type StyledProductsType = {
+export interface IProducts {
+  products: IProduct[];
+  elementRef: React.RefObject<HTMLDivElement>;
   isOverflowing: boolean;
-};
+}
+
+export interface IStyledProducts {
+  isOverflowing: boolean;
+}

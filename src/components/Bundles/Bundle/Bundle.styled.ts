@@ -1,5 +1,11 @@
 import styled from 'styled-components';
-import { BundleBackGroundType } from './Bundle.types';
+
+export const styles = {
+  margin: 'auto',
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+};
 
 export const StyledBundle = styled.div`
   background: linear-gradient(
@@ -14,35 +20,18 @@ export const StyledBundle = styled.div`
   position: relative;
 `;
 
-export const StyledBundleBackGround = styled.div<BundleBackGroundType>`
-  background-image: url(${({ bgImage }) => bgImage || ''});
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  width: 320px;
-  height: 120px;
-  margin: auto;
+export const StyledBundleContainer = styled.div`
+  position: absolute;
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  @media (min-width: 600px) {
-    width: 450px;
-    height: 160px;
-  }
+  gap: 8px;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, 0);
 `;
 
 export const StyledBundleInformation = styled.div`
   display: flex;
   justify-content: space-between;
   margin: 16px 8px 6px;
-  color: white;
-`;
-
-export const StyledBundleItem = styled.p`
-  font-size: 1rem;
-  font-weight: 800;
-  margin: 0;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: black;
+  color: ${({ theme }) => theme.colors.white};
 `;

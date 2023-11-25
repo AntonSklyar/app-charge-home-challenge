@@ -1,12 +1,11 @@
 import React from 'react';
 import { StyledButton } from './Button.styled';
-import { PriceType } from '../../constants';
+import { IButton } from './Button.types';
 
-const Button = ({ amount, currencySymbol }: PriceType) => {
+const Button = ({ buttonStyle, children, onClick }: IButton) => {
   return (
-    <StyledButton>
-      {currencySymbol}
-      {amount}
+    <StyledButton onClick={onClick} buttonStyle={buttonStyle}>
+      {children}
     </StyledButton>
   );
 };

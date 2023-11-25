@@ -1,12 +1,26 @@
 import React from 'react';
-import { StyledStore } from './Store.styled';
 import { Bundles } from '../../components';
+import BackgroundImage from '../../components/BackgroundImage';
+import {
+  BackgroundPosition,
+  BackgroundRepeat,
+  BackgroundSize,
+} from '../../components/BackgroundImage/BackgroundImage.types';
 
 const Store = () => {
+  const BACKGROUND_COVER = './assets/store-background.jpg';
+
   return (
-    <StyledStore>
+    <BackgroundImage
+      backgroundImage={BACKGROUND_COVER}
+      backgroundPosition={BackgroundPosition.Center}
+      backgroundSize={BackgroundSize.Cover}
+      backgroundRepeat={BackgroundRepeat.NoRepeat}
+      width="100vw"
+      height="100vh"
+    >
       <Bundles />
-    </StyledStore>
+    </BackgroundImage>
   );
 };
 
