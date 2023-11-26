@@ -6,6 +6,6 @@ export enum Buttons {
 }
 
 export interface IButton extends React.PropsWithChildren {
-  buttonStyle: Buttons;
+  variant: Buttons;
   onClick?: () => void;
 }

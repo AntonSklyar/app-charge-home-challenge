@@ -1,46 +1,63 @@
-# Getting Started with Create React App
+# app-charge-home-challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+This repository contains `app-charge-home-challenge`, a web application designed to display product bundles interactively. It functions as a page for users to view collections of products, each showcasing information on the number of items in stock, their cost, and a countdown to highlight limited-time deals. The application's design prioritizes simplicity, allowing for effortless navigation and interaction with product bundles.
 
-In the project directory, you can run:
+## Application Details
 
-### `npm start`
+The application presents an array of bundles, each containing a selection of products, the quantity available, a countdown timer, and the price for the bundle. In instances where products exceed the bundle's display capacity, navigation buttons are provided to view additional products.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Technical Structure
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+The application is developed using the `React` library with `TypeScript`. Routing within the application is managed via the `react-router-dom` library, and the `styled-components` library is utilized for component styling. Code quality is maintained with `ESLint` and `Prettier`.
 
-### `npm test`
+Dependency versions and configurations are specified within the `package.json` file. Installation of all dependencies is achieved through:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```sh
+npm install
+```
 
-### `npm run build`
+## Project Hierarchy
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project is organized into several directories, each serving a specific function:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### `components`
+This directory holds UI components, with each component typically comprising:
+- `.tsx` file: Contains the component's functional implementation.
+- `.styled.tsx` file: Houses scoped styling using styled-components.
+- `.types.tsx` file: Includes TypeScript type definitions for the component.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `pages`
+This directory includes page-level components like:
+- `Store`: The main store page component.
+- `PageNotFound`: Component displayed for undefined routes.
 
-### `npm run eject`
+### `hooks`
+Custom React hooks facilitating specific functionalities are stored here:
+- `useDataFetcher`: Hook for fetching data from APIs or services.
+- `useHorizontalScroll`: Hook to implement horizontal scrolling, useful in carousels.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### `utils`
+Utility functions are located here, assisting in various operations:
+- `getRandomDelayPromise.ts`: Simulates server response delays.
+- `getTimeLeft.ts`: Converts milliseconds to a human-readable time format (hh:mm:ss).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### `styles`
+The `styles` directory is responsible for the visual theme and global styling of the application:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- `GlobalStyles.ts`: Defines global styles that are applied throughout the application, ensuring consistency in the visual design.
+- `theme.ts`: Contains theme-specific properties such as colors, fonts, and other design tokens. This theme object is used by the `ThemeProvider` component to provide consistent theming.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### `constants`
+Contains application-wide constants such as:
+- `BUNDLES`: Data related to product bundles.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Running the Application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To launch the application in development mode, the following command is used:
+
+```sh
+npm start
+```

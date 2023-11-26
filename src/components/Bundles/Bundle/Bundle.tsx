@@ -65,7 +65,7 @@ const Bundle = ({
           strokeColor={theme.colors.black}
         />
       </StyledBundleInformation>
-      <Button buttonStyle={Buttons.MainButton}>{PRICE}</Button>
+      <Button variant={Buttons.MainButton}>{PRICE}</Button>
     </StyledBundle>
   );
 };

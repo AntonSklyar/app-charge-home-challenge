@@ -6,8 +6,8 @@ export const StyledButton = styled.button<IButton>`
   border: 0;
 
   // MainButton styles
-  ${({ buttonStyle }) =>
-    buttonStyle === Buttons.MainButton &&
+  ${({ variant }) =>
+    variant === Buttons.MainButton &&
     css`
       border-bottom: 2px solid #4b7625;
       background: linear-gradient(180deg, #83cc4d 0%, #54922f 100%);
@@ -33,8 +33,8 @@ export const StyledButton = styled.button<IButton>`
     `}
 
   // SliderButton styles
-  ${({ buttonStyle }) =>
-    buttonStyle === Buttons.SliderButton &&
+  ${({ variant }) =>
+    variant === Buttons.SliderButton &&
     css`
       border-bottom: 2px solid #c96b15;
       background: ${({ theme }) => theme.colors.orange};

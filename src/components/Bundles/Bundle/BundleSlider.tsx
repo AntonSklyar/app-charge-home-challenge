@@ -15,7 +15,7 @@ const BundleSlider = ({ handleHorizontalScroll }: IBundleSlider) => {
     <StyledBundleSlider>
       <Button
         onClick={() => handleHorizontalScroll(-10)}
-        buttonStyle={Buttons.SliderButton}
+        variant={Buttons.SliderButton}
       >
         <Image
           imageDescription="left-arrow"
@@ -26,7 +26,7 @@ const BundleSlider = ({ handleHorizontalScroll }: IBundleSlider) => {
       </Button>
       <Button
         onClick={() => handleHorizontalScroll(10)}
-        buttonStyle={Buttons.SliderButton}
+        variant={Buttons.SliderButton}
       >
         <Image
           imageDescription="right-arrow"
